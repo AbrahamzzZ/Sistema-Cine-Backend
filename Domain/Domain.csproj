@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Contexts\Configuration\" />
+    <Folder Include="Models\Dto\" />
   </ItemGroup>
 
 </Project>

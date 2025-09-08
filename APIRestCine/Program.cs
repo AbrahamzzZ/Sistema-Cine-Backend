@@ -1,4 +1,12 @@
+using Domain.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Agregar DbContext con la cadena de conexión del appsettings.json
+builder.Services.AddDbContext<SistemaCineContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"))
+);
 
 // Add services to the container.
 
